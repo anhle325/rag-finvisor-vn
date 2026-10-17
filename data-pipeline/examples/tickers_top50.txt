@@ -1,0 +1,62 @@
+# Top 50 — kho BCTC thật cho khoá học (lập 27/09/2026)
+#
+# 30 mã đầu = rổ VN30 kỳ tháng 7/2026 (hiệu lực 03/08/2026): danh mục kỳ 1/2026 của HOSE,
+#   bỏ TPB, PLX, thêm MCH, TCX.
+# 20 mã sau = vốn hoá lớn trong VN100 / dự phòng VN30, chọn để đủ ngành và có lịch sử
+#   BCTC từ 2020 (VCK, VPX trong danh sách dự phòng bị bỏ qua vì mới niêm yết).
+#
+# Lưu ý cho spike: TCX, VPL, MCH mới lên HOSE gần đây — kỳ trước ngày niêm yết có thể
+# thiếu tài liệu; đó là dữ liệu, không phải lỗi.
+#
+# ---- VN30 (7/2026) ----------------------------------------------------------
+ACB
+BID
+CTG
+DGC
+FPT
+GAS
+GVR
+HDB
+HPG
+LPB
+MBB
+MCH
+MSN
+MWG
+SAB
+SHB
+SSB
+SSI
+STB
+TCB
+TCX
+VCB
+VHM
+VIB
+VIC
+VJC
+VNM
+VPB
+VPL
+VRE
+# ---- +20 vốn hoá lớn, đa ngành ------------------------------------------------
+PLX
+TPB
+BSR
+EIB
+MSB
+BCM
+GEE
+REE
+POW
+BVH
+VCI
+VND
+HCM
+PNJ
+KDH
+NLG
+KBC
+DXG
+DBC
+VCG
