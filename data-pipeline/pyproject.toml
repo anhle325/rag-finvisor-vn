@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bctc-collector"
+version = "0.1.0"
+description = "Build a corpus of real Vietnamese listed-company financial statements (BCTC) from a list of stock tickers"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "FinVisor VN" }]
+keywords = ["vietnam", "financial-statements", "bctc", "rag", "corpus", "crawler"]
+
+# Minimal dependencies to run the pipeline (discover -> plan -> download -> ingest -> reference).
+dependencies = [
+    "requests>=2.28",
+    "pypdf>=3.17",
+]
+
+[project.optional-dependencies]
+# Extract .rar archives some portals return (also needs unar/7z/unrar on the system).
+rar = ["rarfile>=4.0"]
+# Explore the CSV outputs in a notebook / tests.
+analysis = ["pandas>=1.5"]
+# Development tooling.
+dev = [
+    "pytest>=7.0",
+    "pandas>=1.5",
+]
+
+[project.scripts]
+bctc-collector = "bctc_collector.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/anhle325/rag-finvisor-vn"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Lets `pytest` import the package from src/ even before `pip install -e .`.
+pythonpath = ["src"]
+addopts = "-q"

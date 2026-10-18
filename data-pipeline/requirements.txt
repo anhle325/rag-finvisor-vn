@@ -1,0 +1,10 @@
+# Minimal runtime dependencies for the pipeline
+# (discover -> plan -> download -> ingest -> reference).
+# Recommended for development: `pip install -e .[dev]` (reads pyproject.toml).
+# This file is kept for a quick run only: `pip install -r requirements.txt`.
+requests>=2.28
+pypdf>=3.17
+
+# Optional — uncomment if needed:
+# rarfile>=4.0      # extract .rar archives (also needs unar/7z/unrar on the system)
+# pandas>=1.5       # explore the CSV outputs in a notebook
