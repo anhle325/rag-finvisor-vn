@@ -1,0 +1,4 @@
+# Development + test environment (runs fully offline, no network).
+-r requirements.txt
+pytest>=7.0
+pandas>=1.5
