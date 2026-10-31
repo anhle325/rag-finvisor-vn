@@ -57,3 +57,4 @@ Thumbs.db
 
 # ignore tests cache 
 _http_cache/
+*.jsonl
