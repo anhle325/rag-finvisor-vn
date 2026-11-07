@@ -1,0 +1,6 @@
+# Core runtime: PDF text extraction + page rendering.
+pymupdf>=1.24
+pypdf>=3.17
+
+# OCR for scanned pages is an optional extra — install with:  pip install -e ".[ocr]"
+# (pulls paddleocr>=3.0, paddlepaddle CPU build, pillow, numpy)
