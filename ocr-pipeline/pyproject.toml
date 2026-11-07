@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bctc-ingest"
+version = "0.1.0"
+description = "Turn Vietnamese financial-statement PDFs (structured or scanned) into retrieval chunks as JSON"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "FinVisor VN" }]
+keywords = ["vietnam", "financial-statements", "bctc", "rag", "ocr", "paddleocr", "chunking"]
+
+# Core dependencies: PDF reading/rendering. OCR is an optional extra (see below).
+dependencies = [
+    "pymupdf>=1.24",
+    "pypdf>=3.17",
+]
+
+[project.optional-dependencies]
+# OCR for scanned pages. PaddleOCR 3.x + the CPU build of PaddlePaddle, plus image handling.
+ocr = [
+    "paddleocr>=3.0",
+    "paddlepaddle>=3.0",
+    "pillow>=10.0",
+    "numpy>=1.24",
+]
+dev = [
+    "pytest>=7.0",
+]
+
+[project.scripts]
+bctc-ingest = "bctc_ingest.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/anhle325/rag-finvisor-vn"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
